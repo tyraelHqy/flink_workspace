@@ -9,5 +9,8 @@
         <module name="quickstart-scala" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="quickstart-scala" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
