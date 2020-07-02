@@ -1,6 +1,7 @@
 package org.myorg.quickstart.course03;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
+import org.apache.flink.api.common.functions.RichFlatMapFunction;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.utils.ParameterTool;
@@ -23,7 +24,7 @@ public class StreamingWCJavaApp03 {
         try {
             ParameterTool tool = ParameterTool.fromArgs(args);
             port = tool.getInt("port");
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println("端口未设置，使用默认端口9999");
             port = 9999;
         }
@@ -34,8 +35,20 @@ public class StreamingWCJavaApp03 {
         DataStreamSource<String> text = env.socketTextStream("localhost", port);
 
         // step3： transform
+//        text.flatMap(new MyFlatMapFunction())
+        text.flatMap(new RichFlatMapFunction<String, WordCount>() {
+            @Override
+            public void flatMap(String value, Collector<WordCount> collector) throws Exception {
+                String[] tokens = value.toLowerCase().split(",");
 
-        text.flatMap(new MyFlatMapFunction()).keyBy(new KeySelector<WordCount, String>() {
+                for (String token : tokens) {
+                    if (token.length() > 0) {
+                        collector.collect(new WordCount(token.trim(), 1));
+                    }
+                }
+            }
+        })
+                .keyBy(new KeySelector<WordCount, String>() {
                     @Override
                     public String getKey(WordCount wordCount) throws Exception {
                         return wordCount.word;
@@ -61,12 +74,11 @@ public class StreamingWCJavaApp03 {
 //        }).keyBy(0).timeWindow(Time.seconds(5)).sum(1).print().setParallelism(1);
 
 
-
         env.execute("StreamingWCJavaApp03");
 
     }
 
-    public static class MyFlatMapFunction implements FlatMapFunction<String,WordCount>{
+    public static class MyFlatMapFunction implements FlatMapFunction<String, WordCount> {
 
         @Override
         public void flatMap(String value, Collector<WordCount> collector) throws Exception {
@@ -74,7 +86,7 @@ public class StreamingWCJavaApp03 {
 
             for (String token : tokens) {
                 if (token.length() > 0) {
-                    collector.collect(new WordCount(token.trim(),1));
+                    collector.collect(new WordCount(token.trim(), 1));
                 }
             }
         }
