@@ -1,6 +1,7 @@
 package org.myorg.quickstart.course03;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
+import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
@@ -34,18 +35,12 @@ public class StreamingWCJavaApp03 {
 
         // step3： transform
 
-        text.flatMap(new FlatMapFunction<String, WordCcount>() {
-            @Override
-            public void flatMap(String value, Collector<WordCcount> collector) throws Exception {
-                String[] tokens = value.toLowerCase().split(",");
-
-                for (String token : tokens) {
-                    if (token.length() > 0) {
-                        collector.collect(new WordCcount(token,1));
+        text.flatMap(new MyFlatMapFunction()).keyBy(new KeySelector<WordCount, String>() {
+                    @Override
+                    public String getKey(WordCount wordCount) throws Exception {
+                        return wordCount.word;
                     }
-                }
-            }
-        }).keyBy("word")
+                })
                 .timeWindow(Time.seconds(5))
                 .sum("count")
                 .print()
@@ -71,14 +66,28 @@ public class StreamingWCJavaApp03 {
 
     }
 
-    public static class WordCcount {
+    public static class MyFlatMapFunction implements FlatMapFunction<String,WordCount>{
+
+        @Override
+        public void flatMap(String value, Collector<WordCount> collector) throws Exception {
+            String[] tokens = value.toLowerCase().split(",");
+
+            for (String token : tokens) {
+                if (token.length() > 0) {
+                    collector.collect(new WordCount(token.trim(),1));
+                }
+            }
+        }
+    }
+
+    public static class WordCount {
         private String word;
         private int count;
 
-        public WordCcount() {
+        public WordCount() {
         }
 
-        public WordCcount(String word, int count) {
+        public WordCount(String word, int count) {
             this.word = word;
             this.count = count;
         }
@@ -101,7 +110,7 @@ public class StreamingWCJavaApp03 {
 
         @Override
         public String toString() {
-            return "WordCcount{" +
+            return "WordCount{" +
                     "word='" + word + '\'' +
                     ", count=" + count +
                     '}';
