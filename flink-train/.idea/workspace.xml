@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetSinkApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/DataSetSinkApp.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetSinkApp$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetSinkApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-data/sink-out/1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-data/sink-out/2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/CounterApp.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/CounterApp$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/CounterApp$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/CounterApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +68,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaDataSetSinkApp">
+  <component name="RunManager" selected="Application.CounterApp">
+    <configuration name="CounterApp" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course04.CounterApp" />
+      <module name="flink-train" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tyrael.flink.course04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataSetSinkApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course04.DataSetSinkApp" />
       <module name="flink-train" />
@@ -91,19 +101,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.tyrael.flink.course04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavaDataSetDataSourceApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course04.JavaDataSetDataSourceApp" />
-      <module name="flink-train" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tryael.flink.course04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CounterApp" />
         <item itemvalue="Application.JavaDataSetSinkApp" />
         <item itemvalue="Application.DataSetSinkApp" />
         <item itemvalue="Application.JavaDataSetTransformationApp" />
         <item itemvalue="Application.DataSetTransformationApp" />
-        <item itemvalue="Application.JavaDataSetDataSourceApp" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +156,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="1238000" />
+      <workItem from="1594124023513" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -350,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594123167254</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="1. Sink函数Java,Scala实现">
+      <created>1594125314340</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1594125314340</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. 从集合创建DataSet之 Java 实现" />
     <MESSAGE value="1. 从文件或者文件夹创建DataSet之 Scala 实现" />
     <MESSAGE value="1. 从文件或者文件夹创建DataSet之 Java 实现" />
     <MESSAGE value="1. 从csv文件创建Dataset之 Scala 实现" />
@@ -395,6 +398,7 @@
     <MESSAGE value="1. Transformation函数outerJoin之Java实现" />
     <MESSAGE value="1. Transformation函数cross之 Scala 实现" />
     <MESSAGE value="1. Transformation函数cross之 java 实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数cross之 java 实现" />
+    <MESSAGE value="1. Sink函数Java,Scala实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Sink函数Java,Scala实现" />
   </component>
 </project>
