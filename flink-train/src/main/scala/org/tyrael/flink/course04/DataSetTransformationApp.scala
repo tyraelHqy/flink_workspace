@@ -15,8 +15,8 @@ object DataSetTransformationApp {
     //    mapPartitionFunction(env)
     //    firstNFunction(env)
     //    flatMapFunction(env)
-
-    distinctFunction(env)
+    //    distinctFunction(env)
+    joinFunction(env)
   }
 
   def mapFunction(env: ExecutionEnvironment): Unit = {
@@ -95,5 +95,26 @@ object DataSetTransformationApp {
 
     val data = env.fromCollection(info)
     data.flatMap(_.split(",")).distinct().print()
+  }
+
+  def joinFunction(env: ExecutionEnvironment): Unit = {
+    val info1 = ListBuffer[(Int, String)]() // 编号 名字
+    info1.append((1, "PKK"))
+    info1.append((2, "JKKK"))
+    info1.append((3, "QLL"))
+    info1.append((4, "YUW"))
+
+    val info2 = ListBuffer[(Int, String)]() // 编号 城市
+    info2.append((1, "北京"))
+    info2.append((2, "上海"))
+    info2.append((3, "成都"))
+    info2.append((5, "杭州"))
+
+    val data1 = env.fromCollection(info1)
+    val data2 = env.fromCollection(info2)
+
+    data1.join(data2).where(0).equalTo(0).apply((first, second) => {
+      (first._1, first._2, second._2)
+    }).print()
   }
 }

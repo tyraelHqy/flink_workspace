@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetTransformationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetTransformationApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/DataSetTransformationApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/DataSetTransformationApp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anon$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anonfun$createSerializer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anon$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anonfun$createSerializer$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaDataSetTransformationApp">
+  <component name="RunManager" selected="Application.DataSetTransformationApp">
     <configuration name="DataSetDataSourceApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course04.DataSetDataSourceApp" />
       <module name="flink-train" />
@@ -136,8 +136,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaDataSetTransformationApp" />
         <item itemvalue="Application.DataSetTransformationApp" />
+        <item itemvalue="Application.JavaDataSetTransformationApp" />
         <item itemvalue="Application.JavaDataSetDataSourceApp" />
         <item itemvalue="Application.DataSetDataSourceApp" />
         <item itemvalue="Application.TestJava" />
@@ -155,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
-      <workItem from="1594046379414" duration="21300000" />
+      <workItem from="1594046379414" duration="22327000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -297,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594114072503</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="1. Transformation函数distinct之Java实现">
+      <created>1594114215962</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1594114215962</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +345,7 @@
     <MESSAGE value="1. Transformation函数flatMap之Scala实现" />
     <MESSAGE value="1. Transformation函数flatMap之Java实现" />
     <MESSAGE value="1. Transformation函数distinct之Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数distinct之Scala实现" />
+    <MESSAGE value="1. Transformation函数distinct之Java实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数distinct之Java实现" />
   </component>
 </project>
