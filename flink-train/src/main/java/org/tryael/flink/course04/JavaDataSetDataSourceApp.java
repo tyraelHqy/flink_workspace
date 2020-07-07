@@ -1,9 +1,11 @@
 package org.tryael.flink.course04;
 
+import org.apache.flink.api.common.operators.Order;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.io.CsvReader;
 import org.apache.flink.api.java.operators.DataSource;
+import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.configuration.Configuration;
 
@@ -18,7 +20,8 @@ public class JavaDataSetDataSourceApp {
 //        fromTextFile(env);
 //        fromCollection(env);
 //        fromCsvFile(env);
-        readRecursiveFiles(env);
+//        readRecursiveFiles(env);
+        firstNFunction(env);
     }
 
     public static void fromCollection(ExecutionEnvironment env) throws Exception {
@@ -61,4 +64,23 @@ public class JavaDataSetDataSourceApp {
         parameters.setBoolean("recursive.file.enumeration", true);
         env.readTextFile(filePath).withParameters(parameters).print();
     }
+
+
+    private static void firstNFunction(ExecutionEnvironment env) throws Exception {
+        List<Tuple2<Integer, String>> info = new ArrayList<>();
+        info.add(new Tuple2<>(1, "Hadoop"));
+        info.add(new Tuple2<>(1, "Spark"));
+        info.add(new Tuple2<>(1, "Flink"));
+        info.add(new Tuple2<>(2, "Java"));
+        info.add(new Tuple2<>(2, "SpringBoot"));
+        info.add(new Tuple2<>(3, "Linux"));
+        info.add(new Tuple2<>(4, "VUE"));
+
+        DataSource<Tuple2<Integer, String>> tuple2DataSource = env.fromCollection(info);
+        tuple2DataSource.first(3).print();
+        tuple2DataSource.groupBy(0).first(3).print();
+        tuple2DataSource.groupBy(0).sortGroup(1, Order.DESCENDING).first(2).print();
+
+    }
+
 }
