@@ -13,7 +13,8 @@ object DataSetTransformationApp {
     //    mapFunction(env)
     //    filterFunction(env)
     //    mapPartitionFunction(env)
-    firstNFunction(env)
+    //    firstNFunction(env)
+    flatMapFunction(env)
   }
 
 
@@ -65,6 +66,23 @@ object DataSetTransformationApp {
 
     //    data.first(3).print()
     //    data.groupBy(0).first(2).print()
-    data.groupBy(0).sortGroup(1,Order.DESCENDING).first(2).print();
+    data.groupBy(0).sortGroup(1, Order.DESCENDING).first(2).print();
+  }
+
+  def flatMapFunction(env: ExecutionEnvironment): Unit = {
+    val info = ListBuffer[String]()
+    info.append("hadoop,spark")
+    info.append("hadoop,flink")
+    info.append("flink,flink")
+
+    val data = env.fromCollection(info)
+
+    //    data.print()
+
+    data.flatMap(_.split(","))
+      .map((_,1))
+      .groupBy(0)
+      .sum(1)
+      .print()
   }
 }
