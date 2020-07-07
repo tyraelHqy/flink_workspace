@@ -1,5 +1,6 @@
 package org.tyrael.flink.course04
 
+import org.apache.flink.api.common.operators.Order
 import org.apache.flink.api.scala.ExecutionEnvironment
 import org.apache.flink.api.scala._
 
@@ -11,7 +12,8 @@ object DataSetTransformationApp {
     val env = ExecutionEnvironment.getExecutionEnvironment
     //    mapFunction(env)
     //    filterFunction(env)
-    mapPartitionFunction(env)
+    //    mapPartitionFunction(env)
+    firstNFunction(env)
   }
 
 
@@ -47,5 +49,22 @@ object DataSetTransformationApp {
 
       x
     }).print()
+  }
+
+  def firstNFunction(env: ExecutionEnvironment): Unit = {
+    val info = ListBuffer[(Int, String)]()
+    info.append((1, "Hadoop"))
+    info.append((1, "Spark"))
+    info.append((1, "Flink"))
+    info.append((2, "Java"))
+    info.append((2, "SpringBoot"))
+    info.append((3, "Linux"))
+    info.append((4, "VUE"))
+
+    val data = env.fromCollection(info)
+
+    //    data.first(3).print()
+    //    data.groupBy(0).first(2).print()
+    data.groupBy(0).sortGroup(1,Order.DESCENDING).first(2).print();
   }
 }
