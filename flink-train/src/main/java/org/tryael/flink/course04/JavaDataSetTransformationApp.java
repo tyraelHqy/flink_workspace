@@ -1,19 +1,19 @@
 package org.tryael.flink.course04;
 
-import org.apache.flink.api.common.functions.FilterFunction;
-import org.apache.flink.api.common.functions.FlatMapFunction;
-import org.apache.flink.api.common.functions.MapFunction;
-import org.apache.flink.api.common.functions.MapPartitionFunction;
+import org.apache.flink.api.common.functions.*;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
 import org.apache.flink.api.java.operators.MapOperator;
 import org.apache.flink.api.java.tuple.Tuple2;
+import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.util.Collector;
 import org.tyrael.flink.course04.DBUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static sun.misc.Version.print;
 
 public class JavaDataSetTransformationApp {
     public static void main(String[] args) throws Exception {
@@ -22,8 +22,10 @@ public class JavaDataSetTransformationApp {
 //        filterFunction(env);
 //        mapPartitionFunction(env);
 //        flatMapFunction(env);
-        distinctFunction(env);
+//        distinctFunction(env);
 
+//        joinFunction(env);
+        outJoinFunction(env);
     }
 
 
@@ -123,5 +125,93 @@ public class JavaDataSetTransformationApp {
                 }
             }
         }).distinct().print();
+    }
+
+    public static void joinFunction(ExecutionEnvironment env) throws Exception {
+
+        List<Tuple2<Integer, String>> info1 = new ArrayList<>();
+        info1.add(new Tuple2<>(1, "PKK"));
+        info1.add(new Tuple2<>(2, "JKKK"));
+        info1.add(new Tuple2<>(3, "QLL"));
+        info1.add(new Tuple2<>(4, "YUW"));
+
+        List<Tuple2<Integer, String>> info2 = new ArrayList<>();
+        info2.add(new Tuple2<>(1, "北京"));
+        info2.add(new Tuple2<>(2, "上海"));
+        info2.add(new Tuple2<>(3, "成都"));
+        info2.add(new Tuple2<>(5, "杭州"));
+
+        DataSource<Tuple2<Integer, String>> data1 = env.fromCollection(info1);
+        DataSource<Tuple2<Integer, String>> data2 = env.fromCollection(info2);
+
+        data1.join(data2).where(0)
+                .equalTo(0)
+                .with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
+                    @Override
+                    public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
+                        return new Tuple3<>(first.f0, first.f1, second.f1);
+                    }
+                }).print();
+
+    }
+
+    public static void outJoinFunction(ExecutionEnvironment env) throws Exception {
+
+        List<Tuple2<Integer, String>> info1 = new ArrayList<>();
+        info1.add(new Tuple2<>(1, "PKK"));
+        info1.add(new Tuple2<>(2, "JKKK"));
+        info1.add(new Tuple2<>(3, "QLL"));
+        info1.add(new Tuple2<>(4, "YUW"));
+
+        List<Tuple2<Integer, String>> info2 = new ArrayList<>();
+        info2.add(new Tuple2<>(1, "北京"));
+        info2.add(new Tuple2<>(2, "上海"));
+        info2.add(new Tuple2<>(3, "成都"));
+        info2.add(new Tuple2<>(5, "杭州"));
+
+        DataSource<Tuple2<Integer, String>> data1 = env.fromCollection(info1);
+        DataSource<Tuple2<Integer, String>> data2 = env.fromCollection(info2);
+
+
+        data1.leftOuterJoin(data2).where(0)
+                .equalTo(0)
+                .with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
+                    @Override
+                    public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
+                        if (second == null) {
+                            return new Tuple3<>(first.f0, first.f1, "-");
+                        }
+                        return new Tuple3<>(first.f0, first.f1, second.f1);
+                    }
+                }).print();
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        data1.rightOuterJoin(data2).where(0)
+                .equalTo(0)
+                .with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
+                    @Override
+                    public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
+                        if (first == null) {
+                            return new Tuple3<>(second.f0, "-", second.f1);
+                        }
+                        return new Tuple3<>(first.f0, first.f1, second.f1);
+                    }
+                }).print();
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        data1.fullOuterJoin(data2).where(0)
+                .equalTo(0)
+                .with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
+                    @Override
+                    public Tuple3<Integer, String, String> join(Tuple2<Integer, String> first, Tuple2<Integer, String> second) throws Exception {
+                        if (first == null) {
+                            return new Tuple3<>(second.f0, "-", second.f1);
+                        } else if (second == null) {
+                            return new Tuple3<>(first.f0, first.f1, "-");
+                        }
+                        return new Tuple3<>(first.f0, first.f1, second.f1);
+                    }
+                }).print();
     }
 }
