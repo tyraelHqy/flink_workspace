@@ -25,7 +25,8 @@ public class JavaDataSetTransformationApp {
 //        distinctFunction(env);
 
 //        joinFunction(env);
-        outJoinFunction(env);
+//        outJoinFunction(env);
+        crossFunction(env);
     }
 
 
@@ -214,4 +215,21 @@ public class JavaDataSetTransformationApp {
                     }
                 }).print();
     }
+
+    public static void crossFunction(ExecutionEnvironment env) throws Exception{
+        List<String> info1 = new ArrayList<>();
+        info1.add("曼联");
+        info1.add("曼城");
+
+        List<String> info2 = new ArrayList<>();
+        info2.add("3");
+        info2.add("1");
+        info2.add("0");
+
+        DataSource<String> data1 = env.fromCollection(info1);
+        DataSource<String> data2 = env.fromCollection(info2);
+
+        data1.cross(data2).print();
+    }
+
 }
