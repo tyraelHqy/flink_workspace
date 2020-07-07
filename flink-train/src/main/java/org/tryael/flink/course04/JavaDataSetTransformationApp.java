@@ -21,7 +21,8 @@ public class JavaDataSetTransformationApp {
 //        mapFunction(env);
 //        filterFunction(env);
 //        mapPartitionFunction(env);
-        flatMapFunction(env);
+//        flatMapFunction(env);
+        distinctFunction(env);
 
     }
 
@@ -101,8 +102,26 @@ public class JavaDataSetTransformationApp {
         }).map(new MapFunction<String, Tuple2<String, Integer>>() {
             @Override
             public Tuple2<String, Integer> map(String value) throws Exception {
-                return new Tuple2<String, Integer>(value,1);
+                return new Tuple2<String, Integer>(value, 1);
             }
         }).groupBy(0).sum(1).print();
+    }
+
+    public static void distinctFunction(ExecutionEnvironment env) throws Exception {
+        List<String> info = new ArrayList<>();
+        info.add("hadoop,spark");
+        info.add("hadoop,flink");
+        info.add("flink,flink");
+
+        DataSource<String> stringDataSource = env.fromCollection(info);
+        stringDataSource.flatMap(new FlatMapFunction<String, String>() {
+            @Override
+            public void flatMap(String input, Collector<String> out) throws Exception {
+                String[] splits = input.split(",");
+                for (String s : splits) {
+                    out.collect(s);
+                }
+            }
+        }).distinct().print();
     }
 }
