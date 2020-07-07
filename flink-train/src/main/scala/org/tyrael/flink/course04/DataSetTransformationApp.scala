@@ -7,7 +7,8 @@ object DataSetTransformationApp {
 
   def main(args: Array[String]): Unit = {
     val env = ExecutionEnvironment.getExecutionEnvironment
-    mapFunction(env)
+    //    mapFunction(env)
+    filterFunction(env)
   }
 
   def mapFunction(env: ExecutionEnvironment): Unit = {
@@ -17,5 +18,12 @@ object DataSetTransformationApp {
     // data.map((x: Int) => x + 1).print()
     // data.map(x => x+1).print()
     data.map(_ + 1).print()
+  }
+
+  def filterFunction(env: ExecutionEnvironment): Unit = {
+    env.fromCollection(List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+      .map(_ + 1)
+      .filter(_ > 5)
+      .print()
   }
 }
