@@ -14,9 +14,10 @@ object DataSetTransformationApp {
     //    filterFunction(env)
     //    mapPartitionFunction(env)
     //    firstNFunction(env)
-    flatMapFunction(env)
-  }
+    //    flatMapFunction(env)
 
+    distinctFunction(env)
+  }
 
   def mapFunction(env: ExecutionEnvironment): Unit = {
     val data = env.fromCollection(List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
@@ -80,9 +81,19 @@ object DataSetTransformationApp {
     //    data.print()
 
     data.flatMap(_.split(","))
-      .map((_,1))
+      .map((_, 1))
       .groupBy(0)
       .sum(1)
       .print()
+  }
+
+  def distinctFunction(env: ExecutionEnvironment): Unit = {
+    val info = ListBuffer[String]()
+    info.append("hadoop,spark")
+    info.append("hadoop,flink")
+    info.append("flink,flink")
+
+    val data = env.fromCollection(info)
+    data.flatMap(_.split(",")).distinct().print()
   }
 }

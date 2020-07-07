@@ -1,167 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="1. Transformation函数mapPartition之 Java 实现">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_kryo_kryo_2_24_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_minlog_minlog_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_scopt_scopt_2_11_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_chill_2_11_0_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_chill_java_0_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_actor_2_11_2_5_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_protobuf_2_11_2_5_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_slf4j_2_11_2_5_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_stream_2_11_2_5_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_config_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_ssl_config_core_2_11_0_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_annotations_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_clients_2_11_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_core_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_hadoop_fs_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_java_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_metrics_core_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_optimizer_2_11_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_queryable_state_client_java_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_runtime_2_11_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_scala_2_11_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_shaded_asm_7_7_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_shaded_guava_18_0_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_shaded_jackson_2_10_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_shaded_netty_4_1_39_Final_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_streaming_java_2_11_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_streaming_scala_2_11_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_force_shading_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_clapper_grizzled_slf4j_2_11_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_java8_compat_2_11_0_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_11_1_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_compiler_2_11_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_11_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/flink-train.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetDataSourceApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DBUtils$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DBUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetDataSourceApp$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetDataSourceApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anon$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anonfun$createSerializer$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anon$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anonfun$createSerializer$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapFunction$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/1/f/1f1788375563bdbceaa83033c5ea44580d68c544" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/2/4/24194f685e8afa1b4486fc95678f9244782aba2a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/9/4/9486e50fa6d22d643950dde6c6498ce9d02d119c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/b/9/b958eb627c877946d1809bd7aa2ab429f41e7517" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/e/5/e57026e2ae13f279b76d0e3219c460cc8756fa3a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/0/2/02f49e90a64aa3822ebf697ee769113cd081c063" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/0/a/0a7a111abc0a2642a5bf7bed3eaa1979698e0dc6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/0/d/0dd353365bc8fc375462b8b911bd9af21d7b31c6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/1/3/13b57e8b010f0fef3133105d1f65cf8c0a08daa7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/1/3/13e1f16a5e7d48f65ba02f66f32c4373a0f4a171" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/2/2/2241a6daf45c63541574504a8cce5f4c75710d1b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/2/7/2767a47f873ab7c1bc661299576ece2ebde8ff7a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/2/d/2dfa7669c20c41273cb505d16f04d17467fb3330" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/3/1/311834f8ce9d329aafabea71c72b8072147ace8a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/3/7/37e8c6a1cc493ad2b800c84c0f057a9f350051c0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/3/b/3bbba587c7fb982ce7dcbb39a066c7a9e7f49455" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/4/8/485217e85be620bdf6aaaf31aa2efdf7527dbd45" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/5/0/5073bbdb7ced76d748927fc165fee8073f4daf4b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/5/0/50f349041f30492d452e5525fa7aec158ea011fc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/5/1/51be8488bab20d150dcdf70a7009ff94259e1e6a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/5/7/57231b00f388ed6b20108013c3a6e9133ae37ffc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/5/b/5b1b479533ccc16a2f66c8a23f6936c3bd4b582e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/5/e/5e7d005d1bb81fff8fe7c895c41aa932c248953f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/6/e/6e1fee0c789bc255464d1b25597422bbb94d315e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/6/e/6ee0e6e0a483fea02402e8094b3b50fe040aa607" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/7/5/751fa57cfce330da22a6d3ac4b6f5672d7be6505" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/7/5/75c130391fd42c8f4b0b20f5236331673454a9aa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/7/6/7652707021050671539b9812f7791ce4e38eaa47" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/7/c/7c6f9bbf1b3ed3f370bd24822bcca9be6de59159" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/8/5/8581551d0153005f9ca36a4421aafb8fbe1f6458" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/8/c/8c7a0b14ef77255bf1e3fc0791aad2d07be0bc17" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/9/4/9412369239171b16a65c4daf083d73545b21f16e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/a/1/a1963c122f6944500ffb4ca3402e7b65f1d7fa2e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/a/3/a3be3d17b596a216b845a43cf17db2abafbc8667" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/a/4/a4a752e0a99eaf62ad409332709400274958efbd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/a/7/a7ed49cfb57c89f1f87dfd495225a24b40b68682" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/a/8/a880957420efa27293f2b148a10db78117fa96b8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/b/1/b18e25ef2749dc9dbed7cc9236386ccd03e6657d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/b/3/b364b484333680a125e47ff070d370058db60b29" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/b/4/b4c89005cb9d52844b4df7a888c25d6e3673a637" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/b/5/b5dd4b6ac24a1acf984198f1bad0b8f62d9e85c7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/b/c/bc6358136edc59cf020e4b869a7f1d68746b7381" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/b/f/bf7ef8d13ce3930daa2670bbaf00c7bd557ef5a1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/c/5/c50f22eb73e851442864ea0e3a4bf1f2bc9e9c54" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/c/8/c8c85d53537d4ebfdef610ce72060fa2e2923417" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/d/c/dc4c0dc3225ca79af4c8d27753b598b37eccd95e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/d/f/dfb58492b3bd088817487467abbbdf7649e06cbb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/e/0/e03305e7c7fc3e40c1772311b67074eef7737311" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/e/1/e14a5f7703a13f8b661c853ceaaeaa0077addd58" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/e/8/e8f36715e7fa0ff4ea9edd1f6fcb19e9d239f0e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/e/9/e9f8211c6ad92b61d6c7f6fb17f01d2ab108c201" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/e/c/ec9df0247989e7f2bce6158ffad5a99a0873336e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/e/e/ee7df0123465c554aef0d51d7de94807273885a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/f/3/f383fe48a116e8f6aa09ee90ce54e261612e0380" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/f/9/f908e68454185c3830dbfa84be734d39e8e3c14d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/target/classes/META-INF/quickstart.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/target/classes/org/myorg/quickstart/course03/StreamingWCJavaApp03$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/target/classes/org/myorg/quickstart/course03/StreamingWCJavaApp03$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/target/classes/org/myorg/quickstart/course03/StreamingWCJavaApp03$MyFlatMapFunction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/target/classes/org/myorg/quickstart/course03/StreamingWCJavaApp03$WordCount.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quickstart/target/classes/org/myorg/quickstart/course03/StreamingWCJavaApp03.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetTransformationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetTransformationApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/BatchJob$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/BatchJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/StreamingJob$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/StreamingJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../quickstart-scala/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$distinctFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/DataSetTransformationApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/DataSetTransformationApp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anonfun$createSerializer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3$$anonfun$createSerializer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anon$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anon$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anonfun$createSerializer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4$$anonfun$createSerializer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaDataSetTransformationApp">
+  <component name="RunManager" selected="Application.DataSetTransformationApp">
     <configuration name="DataSetDataSourceApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course04.DataSetDataSourceApp" />
       <module name="flink-train" />
@@ -285,8 +145,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaDataSetTransformationApp" />
         <item itemvalue="Application.DataSetTransformationApp" />
+        <item itemvalue="Application.JavaDataSetTransformationApp" />
         <item itemvalue="Application.JavaDataSetDataSourceApp" />
         <item itemvalue="Application.DataSetDataSourceApp" />
         <item itemvalue="Application.TestJava" />
@@ -304,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
-      <workItem from="1594046379414" duration="20710000" />
+      <workItem from="1594046379414" duration="21079000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -432,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594113102133</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="1. Transformation函数flatMap之Java实现">
+      <created>1594113648453</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1594113648453</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,6 +338,7 @@
     <MESSAGE value="1. Transformation函数first之 Scala 实现" />
     <MESSAGE value="1. Transformation函数first之 Java 实现" />
     <MESSAGE value="1. Transformation函数flatMap之Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数flatMap之Scala实现" />
+    <MESSAGE value="1. Transformation函数flatMap之Java实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数flatMap之Java实现" />
   </component>
 </project>
