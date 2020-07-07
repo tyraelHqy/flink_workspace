@@ -1,11 +1,13 @@
 package org.tryael.flink.course04;
 
 import org.apache.flink.api.common.functions.FilterFunction;
+import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.MapPartitionFunction;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
 import org.apache.flink.api.java.operators.MapOperator;
+import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
 import org.tyrael.flink.course04.DBUtils;
 
@@ -18,8 +20,11 @@ public class JavaDataSetTransformationApp {
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 //        mapFunction(env);
 //        filterFunction(env);
-        mapPartitionFunction(env);
+//        mapPartitionFunction(env);
+        flatMapFunction(env);
+
     }
+
 
     public static void mapFunction(ExecutionEnvironment env) throws Exception {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -76,5 +81,28 @@ public class JavaDataSetTransformationApp {
                 DBUtils.returnConnection(connection);
             }
         }).print();
+    }
+
+    public static void flatMapFunction(ExecutionEnvironment env) throws Exception {
+        List<String> info = new ArrayList<>();
+        info.add("hadoop,spark");
+        info.add("hadoop,flink");
+        info.add("flink,flink");
+
+        DataSource<String> stringDataSource = env.fromCollection(info);
+        stringDataSource.flatMap(new FlatMapFunction<String, String>() {
+            @Override
+            public void flatMap(String input, Collector<String> out) throws Exception {
+                String[] splits = input.split(",");
+                for (String s : splits) {
+                    out.collect(s);
+                }
+            }
+        }).map(new MapFunction<String, Tuple2<String, Integer>>() {
+            @Override
+            public Tuple2<String, Integer> map(String value) throws Exception {
+                return new Tuple2<String, Integer>(value,1);
+            }
+        }).groupBy(0).sum(1).print();
     }
 }
