@@ -7,3 +7,4 @@
 /target/quickstart-0.1.jar
 /target/classes/org/myorg/quickstart/StreamingJob.class
 .idea
+.target
