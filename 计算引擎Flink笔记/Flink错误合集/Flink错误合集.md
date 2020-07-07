@@ -48,3 +48,21 @@ class org.myorg.quickstart.course03.StreamingWCJavaApp03$WordCcount is **missing
 需要加上无参的构造器
 
 [POJO 与其他对象的区别]()
+
+## java.lang.InternalError: Malformed class name问题
+
+在Flink中定义
+
+```scala
+  def fromCsvFile(env: ExecutionEnvironment): Unit = {
+    val filePath = "file:///D:\\Users\\tyraelhuang\\IdeaProjects\\flink-workspace\\test-data\\people.csv"
+    //    env.readCsvFile[(String, Int, String)](filePath, ignoreFirstLine = true).print()
+
+    //    env.readCsvFile[(String,Int)](filePath,ignoreFirstLine = true,includedFields = Array(0,1)).print()
+    case class MyCaseClass(name: String, age: Int)
+    env.readCsvFile[MyCaseClass](filePath, ignoreFirstLine = true, includedFields = Array(0, 1)).print()
+  }
+}
+```
+
+报错 Malformed class name，在异常栈中找到发现了lookupConstructor的报错，猜测是内部类的问题，所以把内部类放在fromCsvFile之外，异常解决。
