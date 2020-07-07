@@ -1,19 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$9.class" afterDir="false" />
+    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="1. Transformation函数cross之 Scala 实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetTransformationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetTransformationApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course04/JavaDataSetTransformationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/DataSetTransformationApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course04/DataSetTransformationApp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$11$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$11$$anon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$11$$anonfun$createSerializer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$11$$anonfun$createSerializer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$12$$anon$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$12$$anon$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$12$$anonfun$createSerializer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$12$$anonfun$createSerializer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$13$$anon$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$13$$anon$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$13$$anonfun$createSerializer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$13$$anonfun$createSerializer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$14$$anon$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$14$$anon$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$14$$anonfun$createSerializer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$14$$anonfun$createSerializer$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$15$$anon$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$15$$anon$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$15$$anonfun$createSerializer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$15$$anonfun$createSerializer$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$16$$anon$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$16$$anon$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$16$$anonfun$createSerializer$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$16$$anonfun$createSerializer$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$17$$anon$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$17$$anon$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$17$$anonfun$createSerializer$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$17$$anonfun$createSerializer$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$18$$anon$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$18$$anon$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$18$$anonfun$createSerializer$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$18$$anonfun$createSerializer$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$19$$anon$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$19$$anon$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$19$$anonfun$createSerializer$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$19$$anonfun$createSerializer$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$20$$anon$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$20$$anon$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$20$$anonfun$createSerializer$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$20$$anonfun$createSerializer$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anon$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$distinctFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$distinctFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$filterFunction$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$flatMapFunction$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$joinFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$joinFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$mapPartitionFunction$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$outJoinFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$outJoinFunction$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$outJoinFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$outJoinFunction$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$outJoinFunction$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$$anonfun$outJoinFunction$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetTransformationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/04. DataSet API编程.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaDataSetTransformationApp">
+  <component name="RunManager" selected="Application.DataSetTransformationApp">
     <configuration name="DataSetDataSourceApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course04.DataSetDataSourceApp" />
       <module name="flink-train" />
@@ -137,8 +172,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaDataSetTransformationApp" />
         <item itemvalue="Application.DataSetTransformationApp" />
+        <item itemvalue="Application.JavaDataSetTransformationApp" />
         <item itemvalue="Application.JavaDataSetDataSourceApp" />
         <item itemvalue="Application.DataSetDataSourceApp" />
         <item itemvalue="Application.TestJava" />
@@ -156,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
-      <workItem from="1594046379414" duration="24681000" />
+      <workItem from="1594046379414" duration="25749000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -326,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594115750784</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1. Transformation函数outerJoin之Java实现">
+      <created>1594121858301</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1594121858301</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +412,7 @@
     <MESSAGE value="1. Transformation函数distinct之Java实现" />
     <MESSAGE value="1. Transformation函数join之Scala实现" />
     <MESSAGE value="1. Transformation函数outerJoin之Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数outerJoin之Scala实现" />
+    <MESSAGE value="1. Transformation函数outerJoin之Java实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数outerJoin之Java实现" />
   </component>
 </project>

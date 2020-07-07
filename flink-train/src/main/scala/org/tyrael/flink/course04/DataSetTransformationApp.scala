@@ -17,7 +17,8 @@ object DataSetTransformationApp {
     //    flatMapFunction(env)
     //    distinctFunction(env)
     //    joinFunction(env)
-    outJoinFunction(env)
+    //    outJoinFunction(env)
+    crossFunction(env)
   }
 
   def mapFunction(env: ExecutionEnvironment): Unit = {
@@ -161,7 +162,15 @@ object DataSetTransformationApp {
         (second._1, first._2, second._2)
       }
     }).print()
+  }
 
+  def crossFunction(env: ExecutionEnvironment): Unit = {
+    val info1 = List("曼城", "曼联")
+    val info2 = List(3, 1, 0)
 
+    val data1 = env.fromCollection(info1)
+    val data2 = env.fromCollection(info2)
+
+    data1.cross(data2).print()
   }
 }
