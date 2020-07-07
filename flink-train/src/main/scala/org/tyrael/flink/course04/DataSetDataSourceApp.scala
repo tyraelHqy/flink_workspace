@@ -13,8 +13,9 @@ object DataSetDataSourceApp {
     // 从集合的方式读取DataSet
     // fromCollection(env)
     // fromTextFile(env)
-//    fromCsvFile(env)
-    readRecursiveFiles(env)
+    //    fromCsvFile(env)
+//    readRecursiveFiles(env)
+    readCompressionFiles(env)
   }
 
   def fromCollection(env: ExecutionEnvironment): Unit = {
@@ -35,7 +36,7 @@ object DataSetDataSourceApp {
     // env.readTextFile(filePath).print()
   }
 
-//  case class MyCaseClass(name: String, age: Int)
+  //  case class MyCaseClass(name: String, age: Int)
 
   def fromCsvFile(env: ExecutionEnvironment): Unit = {
     val filePath = "file:///D:\\Users\\tyraelhuang\\IdeaProjects\\flink-workspace\\test-data\\people.csv"
@@ -43,9 +44,9 @@ object DataSetDataSourceApp {
 
     //    env.readCsvFile[(String,Int)](filePath,ignoreFirstLine = true,includedFields = Array(0,1)).print()
 
-//    env.readCsvFile[MyCaseClass](filePath, ignoreFirstLine = true, includedFields = Array(0, 1)).print()
+    //    env.readCsvFile[MyCaseClass](filePath, ignoreFirstLine = true, includedFields = Array(0, 1)).print()
 
-    env.readCsvFile[Person](filePath,ignoreFirstLine = true,pojoFields = Array("name","age","work")).print()
+    env.readCsvFile[Person](filePath, ignoreFirstLine = true, pojoFields = Array("name", "age", "work")).print()
   }
 
   def readRecursiveFiles(env: ExecutionEnvironment): Unit = {
@@ -61,5 +62,10 @@ object DataSetDataSourceApp {
     // pass the configuration to the data source
     val logs = env.readTextFile("file:///path/with.nested/files").withParameters(parameters)
     env.readTextFile(filePath).withParameters(parameters).print()
+  }
+
+  def readCompressionFiles(env:ExecutionEnvironment): Unit ={
+    val filePath = "file:///D:\\Users\\tyraelhuang\\IdeaProjects\\flink-workspace\\test-data\\compression"
+    env.readTextFile(filePath).print()
   }
 }
