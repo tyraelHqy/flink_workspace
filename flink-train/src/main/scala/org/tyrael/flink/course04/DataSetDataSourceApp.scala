@@ -2,6 +2,7 @@ package org.tyrael.flink.course04
 
 import org.apache.flink.api.scala.ExecutionEnvironment
 import org.apache.flink.api.scala._
+import org.apache.flink.configuration.Configuration
 import org.tryael.flink.course04.Person
 
 object DataSetDataSourceApp {
@@ -12,7 +13,8 @@ object DataSetDataSourceApp {
     // 从集合的方式读取DataSet
     // fromCollection(env)
     // fromTextFile(env)
-    fromCsvFile(env)
+//    fromCsvFile(env)
+    readRecursiveFiles(env)
   }
 
   def fromCollection(env: ExecutionEnvironment): Unit = {
@@ -44,5 +46,20 @@ object DataSetDataSourceApp {
 //    env.readCsvFile[MyCaseClass](filePath, ignoreFirstLine = true, includedFields = Array(0, 1)).print()
 
     env.readCsvFile[Person](filePath,ignoreFirstLine = true,pojoFields = Array("name","age","work")).print()
+  }
+
+  def readRecursiveFiles(env: ExecutionEnvironment): Unit = {
+    val filePath = "file:///D:\\Users\\tyraelhuang\\IdeaProjects\\flink-workspace\\test-data\\nested"
+    env.readTextFile(filePath).print()
+    println("~~~~~~~~~~~~~~~~~分割线~~~~~~~~~~~~~~~~~~~~~")
+
+    // create a configuration object
+    val parameters = new Configuration()
+    // set the recursive enumeration parameter
+    parameters.setBoolean("recursive.file.enumeration", true)
+
+    // pass the configuration to the data source
+    val logs = env.readTextFile("file:///path/with.nested/files").withParameters(parameters)
+    env.readTextFile(filePath).withParameters(parameters).print()
   }
 }

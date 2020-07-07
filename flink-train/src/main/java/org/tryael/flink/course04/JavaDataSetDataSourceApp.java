@@ -5,6 +5,7 @@ import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.io.CsvReader;
 import org.apache.flink.api.java.operators.DataSource;
 import org.apache.flink.api.java.tuple.Tuple3;
+import org.apache.flink.configuration.Configuration;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +17,8 @@ public class JavaDataSetDataSourceApp {
 
 //        fromTextFile(env);
 //        fromCollection(env);
-        fromCsvFile(env);
+//        fromCsvFile(env);
+        readRecursiveFiles(env);
     }
 
     public static void fromCollection(ExecutionEnvironment env) throws Exception {
@@ -47,6 +49,16 @@ public class JavaDataSetDataSourceApp {
                 .ignoreFirstLine()
                 .includeFields(true, true, true)
                 .pojoType(Person.class, "name", "age", "work");
+
         csvInput.print();
+    }
+
+    public static void readRecursiveFiles(ExecutionEnvironment env) throws Exception {
+        String filePath = "file:///D:\\Users\\tyraelhuang\\IdeaProjects\\flink-workspace\\test-data\\nested";
+        // create a configuration object
+        Configuration parameters = new Configuration();
+        // set the recursive enumeration parameter
+        parameters.setBoolean("recursive.file.enumeration", true);
+        env.readTextFile(filePath).withParameters(parameters).print();
     }
 }
