@@ -11,7 +11,8 @@ object DataStreamSourceApp {
     //    socketFunction(env)
 
     //    nonParallelSourceFunction(env)
-    parallelSourceFunction(env)
+    //    parallelSourceFunction(env)
+    richParallelSourceFunction(env)
     env.execute("DataStreamSourceApp")
   }
 
@@ -23,12 +24,15 @@ object DataStreamSourceApp {
   def nonParallelSourceFunction(env: StreamExecutionEnvironment): Unit = {
     val data = env.addSource(new CustomNonParallelSourceFunction).setParallelism(1)
     data.print().setParallelism(1)
-
   }
 
   def parallelSourceFunction(env: StreamExecutionEnvironment): Unit = {
     val data = env.addSource(new CustomParallelSourceFunction).setParallelism(4)
     data.print()
+  }
 
+  def richParallelSourceFunction(env: StreamExecutionEnvironment): Unit = {
+    val data = env.addSource(new CustomRichParallelSourceFunction).setParallelism(4)
+    data.print()
   }
 }
