@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course07/JavaWindowsApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsApp$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course07/JavaWindowsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course07/JavaWindowsApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course07/WindowsApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course07/WindowsApp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsApp$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/07. Flink中的Time及Windows操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/07. Flink中的Time及Windows操作.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,14 +199,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="31750000" />
-    </task>
-    <task id="LOCAL-00002" summary="1. 从集合创建DataSet之Scala实现">
-      <created>1594089437829</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1594089437829</updated>
+      <workItem from="1594124023513" duration="32877000" />
     </task>
     <task id="LOCAL-00003" summary="1. 从集合创建DataSet之 Java 实现">
       <created>1594089820763</created>
@@ -542,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594216071851</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Tumbling Windows详解及Java编程">
+      <created>1594216754103</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1594216754103</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Transformation函数outerJoin之Java实现" />
     <MESSAGE value="1. Transformation函数cross之 Scala 实现" />
     <MESSAGE value="1. Transformation函数cross之 java 实现" />
     <MESSAGE value="1. Sink函数Java,Scala实现" />
@@ -587,7 +588,8 @@
     <MESSAGE value="使用Scala完成Table API&amp;SQL功能的开发" />
     <MESSAGE value="使用Java完成Table API&amp;SQL功能的开发" />
     <MESSAGE value="Tumbling Windows详解及Scala编程" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tumbling Windows详解及Scala编程" />
+    <MESSAGE value="Tumbling Windows详解及Java编程" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tumbling Windows详解及Java编程" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

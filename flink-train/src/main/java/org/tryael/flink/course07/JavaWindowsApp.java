@@ -25,7 +25,7 @@ public class JavaWindowsApp {
                     }
                 }
             }
-        }).keyBy(0).timeWindow(Time.seconds(5)).sum(1).print().setParallelism(1);
+        }).keyBy(0).timeWindow(Time.seconds(10), Time.seconds(5)).sum(1).print().setParallelism(1);
 
         env.execute("JavaWindowsApp");
     }
