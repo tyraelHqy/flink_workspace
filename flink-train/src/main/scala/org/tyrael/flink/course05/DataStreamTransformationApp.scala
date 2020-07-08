@@ -1,5 +1,8 @@
 package org.tyrael.flink.course05
 
+import java.{lang, util}
+
+import org.apache.flink.streaming.api.collector.selector.OutputSelector
 import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 import org.apache.flink.streaming.api.scala._
 
@@ -9,7 +12,8 @@ object DataStreamTransformationApp {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
 
     //    filterFunction(env)
-    unionFunction(env)
+    //    unionFunction(env)
+    splitSelectFunction(env)
 
     env.execute("DataStreamTransformationApp")
   }
@@ -28,5 +32,21 @@ object DataStreamTransformationApp {
 
     data1.union(data2).print()
 
+  }
+
+  def splitSelectFunction(env: StreamExecutionEnvironment): Unit = {
+    val data = env.addSource(new CustomNonParallelSourceFunction)
+    val splits = data.split(new OutputSelector[Long] {
+      override def select(input: Long): lang.Iterable[String] = {
+        val list = new util.ArrayList[String]()
+        if (input % 2 == 0) {
+          list.add("even")
+        } else {
+          list.add("odd")
+        }
+        list
+      }
+    })
+    splits.select("even", "odd").print()
   }
 }
