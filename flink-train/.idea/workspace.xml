@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course05/JavaDataStreamTransformationApp$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course05/JavaCustomSinkToMySQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course05/JavaSinkToMySQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course05/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/CustomSinkToMySQL.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/SinkToMySQL.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/Student.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course05/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course05/JavaDataStreamTransformationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course05/JavaDataStreamTransformationApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course05/JavaDataStreamTransformationApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course05/JavaDataStreamTransformationApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink-train.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flink-train.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetDataSourceApp$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course04/DataSetDataSourceApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/05. DataStream API编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/05. DataStream API编程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/Flink错误合集/Flink错误合集.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/Flink错误合集/Flink错误合集.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +26,49 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="flink_train" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="flink_train" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="flink_train" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="flink_train: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="flink_train" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="flink_train: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="student: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Package Object" />
         <option value="Class" />
+        <option value="Package Object" />
+        <option value="Scala Class" />
       </list>
     </option>
   </component>
@@ -40,11 +88,12 @@
   <component name="ProjectId" id="1eJieAbbSwvXsX6xDzuDZb7ih2l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../permission-tyrael" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2665441" />
@@ -70,22 +119,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaDataStreamTransformationApp">
-    <configuration name="DataSetBroadcastApp" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course04.DataSetBroadcastApp" />
-      <module name="flink-train" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tyrael.flink.course04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataStreamSourceApp" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course05.DataStreamSourceApp" />
+  <component name="RunManager" selected="Application.CustomSinkToMySQL">
+    <configuration name="CustomSinkToMySQL" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course05.CustomSinkToMySQL" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
@@ -103,6 +139,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.tyrael.flink.course05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaCustomSinkToMySQL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course05.JavaCustomSinkToMySQL" />
+      <module name="flink-train" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tryael.flink.course05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CustomSinkToMySQL" />
+        <item itemvalue="Application.JavaCustomSinkToMySQL" />
         <item itemvalue="Application.JavaDataStreamTransformationApp" />
         <item itemvalue="Application.DataStreamTransformationApp" />
         <item itemvalue="Application.JavaDataStreamSourceApp" />
-        <item itemvalue="Application.DataStreamSourceApp" />
-        <item itemvalue="Application.DataSetBroadcastApp" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +207,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="17600000" />
+      <workItem from="1594124023513" duration="23178000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -468,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594191382634</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="1. Transformation函数split和select之Java实现">
+      <created>1594192001204</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1594192001204</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Transformation函数flatMap之Scala实现" />
     <MESSAGE value="1. Transformation函数flatMap之Java实现" />
     <MESSAGE value="1. Transformation函数distinct之Scala实现" />
     <MESSAGE value="1. Transformation函数distinct之Java实现" />
@@ -513,7 +568,8 @@
     <MESSAGE value="1. Transformation函数map和filter之 Java 实现" />
     <MESSAGE value="1. Transformation函数union之Scala和Java实现" />
     <MESSAGE value="1. Transformation函数split和select之Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数split和select之Scala实现" />
+    <MESSAGE value="1. Transformation函数split和select之Java实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Transformation函数split和select之Java实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -522,11 +578,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetBroadcastApp.java</url>
           <line>35</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/tryael/flink/course05/JavaDataStreamTransformationApp.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

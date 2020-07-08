@@ -66,3 +66,10 @@ class org.myorg.quickstart.course03.StreamingWCJavaApp03$WordCcount is **missing
 ```
 
 报错 Malformed class name，在异常栈中找到发现了lookupConstructor的报错，猜测是内部类的问题，所以把内部类放在fromCsvFile之外，异常解决。
+
+### IDEA连接数据库错误
+
+```
+jdbc:mysql://localhost:3306/saam_tx_permission?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+```
+
