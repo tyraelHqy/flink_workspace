@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course07/WindowsReduceApp.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp$$anon$2$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp$$anon$2$$anonfun$createSerializer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp$$anon$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp$$anonfun$main$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp$$anonfun$main$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp$$anonfun$main$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsReduceAppApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course07/JavaWindowsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course07/JavaWindowsApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course07/WindowsApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course07/WindowsApp.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WindowsApp$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/07. Flink中的Time及Windows操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/07. Flink中的Time及Windows操作.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,9 +62,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Package Object" />
         <option value="Scala Class" />
         <option value="Class" />
+        <option value="Package Object" />
       </list>
     </option>
   </component>
@@ -93,6 +97,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.tyrael.flink.course07" />
       <recent name="org.tyrael.flink.course05" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -111,20 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaWindowsApp">
-    <configuration name="CustomSinkToMySQL" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course05.CustomSinkToMySQL" />
-      <module name="flink-train" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tyrael.flink.course05.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.WindowsReduceAppApp">
     <configuration name="JavaTableSQLAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course06.JavaTableSQLAPI" />
       <module name="flink-train" />
@@ -177,13 +169,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WindowsReduceAppApp" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course07.WindowsReduceAppApp" />
+      <module name="flink-train" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tyrael.flink.course07.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WindowsReduceAppApp" />
         <item itemvalue="Application.JavaWindowsApp" />
         <item itemvalue="Application.WindowsApp" />
         <item itemvalue="Application.JavaTableSQLAPI" />
         <item itemvalue="Application.TableSQLAPI" />
-        <item itemvalue="Application.CustomSinkToMySQL" />
       </list>
     </recent_temporary>
   </component>
@@ -199,14 +204,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="32877000" />
-    </task>
-    <task id="LOCAL-00003" summary="1. 从集合创建DataSet之 Java 实现">
-      <created>1594089820763</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1594089820763</updated>
+      <workItem from="1594124023513" duration="33688000" />
     </task>
     <task id="LOCAL-00004" summary="1. 从文件或者文件夹创建DataSet之 Scala 实现">
       <created>1594090982734</created>
@@ -544,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594216754103</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Sliding Windows详解及Scala,Java编程">
+      <created>1594217899386</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1594217899386</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Transformation函数cross之 Scala 实现" />
     <MESSAGE value="1. Transformation函数cross之 java 实现" />
     <MESSAGE value="1. Sink函数Java,Scala实现" />
     <MESSAGE value="1. 需要使用flink计数器的案例" />
@@ -589,7 +593,8 @@
     <MESSAGE value="使用Java完成Table API&amp;SQL功能的开发" />
     <MESSAGE value="Tumbling Windows详解及Scala编程" />
     <MESSAGE value="Tumbling Windows详解及Java编程" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tumbling Windows详解及Java编程" />
+    <MESSAGE value="Sliding Windows详解及Scala,Java编程" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sliding Windows详解及Scala,Java编程" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
