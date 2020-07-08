@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course06/TableSQLAPI.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course06/TableSQLAPI$$anon$2$$anon$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course06/TableSQLAPI$$anon$2$$anonfun$createSerializer$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course06/TableSQLAPI$$anon$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course06/TableSQLAPI$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course06/TableSQLAPI$SalesLog$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course06/TableSQLAPI$SalesLog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course06/TableSQLAPI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-data/sales.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course06/JavaTableSQLAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course06/JavaTableSQLAPI$Sales.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course06/JavaTableSQLAPI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/06. Table API&amp;SQL编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/06. Table API&amp;SQL编程.md" afterDir="false" />
     </list>
@@ -63,9 +57,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Package Object" />
         <option value="Scala Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -116,22 +110,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TableSQLAPI">
+  <component name="RunManager" selected="Application.JavaTableSQLAPI">
     <configuration name="CustomSinkToMySQL" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course05.CustomSinkToMySQL" />
-      <module name="flink-train" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tyrael.flink.course05.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataStreamTransformationApp" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course05.DataStreamTransformationApp" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
@@ -169,6 +150,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaTableSQLAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course06.JavaTableSQLAPI" />
+      <module name="flink-train" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tryael.flink.course06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TableSQLAPI" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course06.TableSQLAPI" />
       <module name="flink-train" />
@@ -184,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaTableSQLAPI" />
         <item itemvalue="Application.TableSQLAPI" />
         <item itemvalue="Application.CustomSinkToMySQL" />
         <item itemvalue="Application.JavaCustomSinkToMySQL" />
         <item itemvalue="Application.JavaDataStreamTransformationApp" />
-        <item itemvalue="Application.DataStreamTransformationApp" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +198,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="26821000" />
+      <workItem from="1594124023513" duration="28668000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -535,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594199679786</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="使用Scala完成Table API&amp;SQL功能的开发">
+      <created>1594201728247</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1594201728247</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Transformation函数distinct之Java实现" />
     <MESSAGE value="1. Transformation函数join之Scala实现" />
     <MESSAGE value="1. Transformation函数outerJoin之Scala实现" />
     <MESSAGE value="1. Transformation函数outerJoin之Java实现" />
@@ -580,7 +580,8 @@
     <MESSAGE value="1. Transformation函数split和select之Java实现" />
     <MESSAGE value="1. 自定义Sink之功能测试Java,Scala实现" />
     <MESSAGE value="1. Table SQL 基本环境搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Table SQL 基本环境搭建" />
+    <MESSAGE value="使用Scala完成Table API&amp;SQL功能的开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用Scala完成Table API&amp;SQL功能的开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
