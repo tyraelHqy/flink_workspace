@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/CustomNonParallelSourceFunction.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/CustomNonParallelSourceFunction.class" afterDir="false" />
+    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="1. 自定义数据源方式ParallelSourceFunction之Scala实现">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/CustomParallelSourceFunction.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/CustomParallelSourceFunction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/DataStreamSourceApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/DataStreamSourceApp.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/05. DataStream API编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/05. DataStream API编程.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +53,9 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.tyrael.flink.course05" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\tyraelhuang\IdeaProjects\flink-workspace\flink-train" />
     </key>
@@ -158,7 +160,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="11894000" />
+      <workItem from="1594124023513" duration="12682000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -405,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594176893070</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="1. 自定义数据源方式SourceFunction之Scala实现">
+      <created>1594178853249</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1594178853249</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Transformation函数map之 scala 实现" />
     <MESSAGE value="1. Transformation函数map之 Java 实现" />
     <MESSAGE value="1. Transformation函数filter之 Scala 实现" />
     <MESSAGE value="1. i Transformation函数filter之Java实现" />
@@ -450,7 +458,8 @@
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Java实现" />
     <MESSAGE value="1. 基于Flink的广播变量Broadcast Variables功能的Java,Scala实现" />
     <MESSAGE value="1. 从Socket创建DataStream之Java,Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 从Socket创建DataStream之Java,Scala实现" />
+    <MESSAGE value="1. 自定义数据源方式SourceFunction之Scala实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 自定义数据源方式SourceFunction之Scala实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
