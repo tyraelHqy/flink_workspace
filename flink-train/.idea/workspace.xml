@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course05/JavaDataStreamSourceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/DataStreamSourceApp.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../images/image-20200708103932683.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/05. DataStream API编程.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/CustomNonParallelSourceFunction.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/CustomNonParallelSourceFunction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/DataStreamSourceApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course05/DataStreamSourceApp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course05/DataStreamSourceApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/05. DataStream API编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/05. DataStream API编程.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaDataStreamSourceApp">
+  <component name="RunManager" selected="Application.DataStreamSourceApp">
     <configuration name="DataSetBroadcastApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course04.DataSetBroadcastApp" />
       <module name="flink-train" />
@@ -138,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaDataStreamSourceApp" />
         <item itemvalue="Application.DataStreamSourceApp" />
+        <item itemvalue="Application.JavaDataStreamSourceApp" />
         <item itemvalue="Application.DataSetBroadcastApp" />
         <item itemvalue="Application.JavaDataSetBroadcastApp" />
         <item itemvalue="Application.JavaDistributeCacheApp" />
@@ -158,7 +158,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="10152000" />
+      <workItem from="1594124023513" duration="11894000" />
     </task>
     <task id="LOCAL-00001" summary="1. 综合java和scala开发的项目flink-train基础构建">
       <created>1594088611553</created>
@@ -398,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594132151800</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="1. 从Socket创建DataStream之Java,Scala实现">
+      <created>1594176893070</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1594176893070</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. 从压缩文件中创建DataSet之Scala实现测试数据" />
     <MESSAGE value="1. Transformation函数map之 scala 实现" />
     <MESSAGE value="1. Transformation函数map之 Java 实现" />
     <MESSAGE value="1. Transformation函数filter之 Scala 实现" />
@@ -443,7 +449,8 @@
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Scala实现" />
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Java实现" />
     <MESSAGE value="1. 基于Flink的广播变量Broadcast Variables功能的Java,Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 基于Flink的广播变量Broadcast Variables功能的Java,Scala实现" />
+    <MESSAGE value="1. 从Socket创建DataStream之Java,Scala实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 从Socket创建DataStream之Java,Scala实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
