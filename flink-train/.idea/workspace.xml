@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course07/JavaWindowsReduceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsReduceApp$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsReduceApp$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tryael/flink/course07/JavaWindowsReduceApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,6 +88,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.tryael.flink.course07" />
       <recent name="org.tyrael.flink.course07" />
       <recent name="org.tyrael.flink.course05" />
     </key>
@@ -111,13 +108,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaWindowsReduceApp">
-    <configuration name="JavaTableSQLAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course06.JavaTableSQLAPI" />
+  <component name="RunManager" selected="Application.JavaWindowsProcessApp">
+    <configuration name="JavaWindowsApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course07.JavaWindowsApp" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.tryael.flink.course06.*" />
+          <option name="PATTERN" value="org.tryael.flink.course07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,8 +122,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaWindowsApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course07.JavaWindowsApp" />
+    <configuration name="JavaWindowsProcessApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course07.JavaWindowsProcessApp" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
@@ -179,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaWindowsProcessApp" />
         <item itemvalue="Application.JavaWindowsReduceApp" />
         <item itemvalue="Application.WindowsReduceAppApp" />
         <item itemvalue="Application.JavaWindowsApp" />
         <item itemvalue="Application.WindowsApp" />
-        <item itemvalue="Application.JavaTableSQLAPI" />
       </list>
     </recent_temporary>
   </component>
@@ -199,21 +196,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="34072000" />
-    </task>
-    <task id="LOCAL-00005" summary="1. 从文件或者文件夹创建DataSet之 Java 实现">
-      <created>1594091501769</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1594091501769</updated>
-    </task>
-    <task id="LOCAL-00006" summary="1. 从csv文件创建Dataset之 Scala 实现">
-      <created>1594093772519</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1594093772519</updated>
+      <workItem from="1594124023513" duration="34642000" />
     </task>
     <task id="LOCAL-00007" summary="1. 从csv文件创建Dataset之 Java 实现">
       <created>1594094446914</created>
@@ -544,7 +527,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594218720945</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Window Functions之ReduceFunction的Java实现">
+      <created>1594219122880</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1594219122881</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Window Functions之ProcessWindowFunction的Java实现">
+      <created>1594219536587</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1594219536587</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,8 +561,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Sink函数Java,Scala实现" />
-    <MESSAGE value="1. 需要使用flink计数器的案例" />
     <MESSAGE value="1. 基于Flink编程的计时器之Scala实现" />
     <MESSAGE value="1. 基于Flink编程的计时器之Java实现" />
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Scala实现" />
@@ -589,7 +584,9 @@
     <MESSAGE value="Tumbling Windows详解及Java编程" />
     <MESSAGE value="Sliding Windows详解及Scala,Java编程" />
     <MESSAGE value="Window Functions之ReduceFunction的Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="Window Functions之ReduceFunction的Scala实现" />
+    <MESSAGE value="Window Functions之ReduceFunction的Java实现" />
+    <MESSAGE value="Window Functions之ProcessWindowFunction的Java实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="Window Functions之ProcessWindowFunction的Java实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
