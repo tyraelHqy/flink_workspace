@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="Window Functions之ProcessWindowFunction的Java实现">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course07/WatermarkTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3$$anon$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3$$anonfun$createSerializer$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4$$anon$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4$$anonfun$createSerializer$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anonfun$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anonfun$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$WindowFunctionTest$$anonfun$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$WindowFunctionTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest.class" afterDir="false" />
+    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="Window Functions之watermark的Scala实现">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course08/JavaFileSystemSink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course08/FileSystemSink.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/08. Flink Connectors.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../计算引擎Flink笔记/07. Flink中的Time及Windows操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/07. Flink中的Time及Windows操作.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink-train.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flink-train.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,13 +113,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WatermarkTest">
-    <configuration name="JavaWindowsApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course07.JavaWindowsApp" />
+  <component name="RunManager" selected="Application.FileSystemSink">
+    <configuration name="FileSystemSink" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course08.FileSystemSink" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.tryael.flink.course07.*" />
+          <option name="PATTERN" value="org.tyrael.flink.course08.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -201,19 +191,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.JavaWindowsApp" />
       <item itemvalue="Application.JavaWindowsProcessApp" />
       <item itemvalue="Application.JavaWindowsReduceApp" />
       <item itemvalue="Application.WatermarkTest" />
       <item itemvalue="Application.WindowsReduceAppApp" />
+      <item itemvalue="Application.FileSystemSink" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FileSystemSink" />
         <item itemvalue="Application.WatermarkTest" />
         <item itemvalue="Application.JavaWindowsProcessApp" />
         <item itemvalue="Application.JavaWindowsReduceApp" />
         <item itemvalue="Application.WindowsReduceAppApp" />
-        <item itemvalue="Application.JavaWindowsApp" />
       </list>
     </recent_temporary>
   </component>
@@ -229,14 +219,7 @@
       <updated>1594046188776</updated>
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
-      <workItem from="1594124023513" duration="37479000" />
-    </task>
-    <task id="LOCAL-00008" summary="1. 从递归文件夹的内容创建DataSet之Scala,java实现">
-      <created>1594102814059</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1594102814059</updated>
+      <workItem from="1594124023513" duration="39894000" />
     </task>
     <task id="LOCAL-00009" summary="1. 从压缩文件中创建DataSet之 Scala 实现">
       <created>1594104856668</created>
@@ -574,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594219649816</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Window Functions之watermark的Scala实现">
+      <created>1594263219713</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1594263219713</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. 基于Flink编程的计时器之Scala实现" />
     <MESSAGE value="1. 基于Flink编程的计时器之Java实现" />
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Scala实现" />
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Java实现" />
@@ -619,7 +608,8 @@
     <MESSAGE value="Window Functions之ReduceFunction的Scala实现" />
     <MESSAGE value="Window Functions之ReduceFunction的Java实现" />
     <MESSAGE value="Window Functions之ProcessWindowFunction的Java实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="Window Functions之ProcessWindowFunction的Java实现" />
+    <MESSAGE value="Window Functions之watermark的Scala实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="Window Functions之watermark的Scala实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
