@@ -15,11 +15,12 @@ ssh hadoop@192.168.199.233
 - ![image-20200709160020449](../images/image-20200709160020449.png)
   	
   	
+  
   - 使用 `source ~/.bash_profile`刷新环境变量
   
 - 使用 `echo $ZK_HOME`判断环境变量是否生效
 
-- 配置文件  $ZK_HOME/conf.zoo.cfg  dataDir不要放在默认的/tmp下
+- 配置文件  $ZK_HOME/conf/zoo.cfg  dataDir不要放在默认的/tmp下
    - `cp zoo_sample.cfg zoo.cfg`
    - `vim zoo.cfg`
    - dataDir不要放在默认的/tmp下，系统tmp会在系统重启的时候全部删除

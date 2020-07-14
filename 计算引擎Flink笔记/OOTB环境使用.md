@@ -53,5 +53,6 @@
 
    
 
->>>>>>> github/master
+> github/master
   注：目标服务器要开启写入权限。
+
