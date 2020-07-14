@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="Window Functions之watermark的Scala实现">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/course08/JavaFileSystemSink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course08/FileSystemSink.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../计算引擎Flink笔记/08. Flink Connectors.md" afterDir="false" />
+    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink-train.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flink-train.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../share-folder/kafka_2.11-1.1.1.tgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../share-folder/zookeeper-3.4.5-cdh5.15.1.tar.gz" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +82,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../permission-tyrael" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2665441" />
@@ -220,20 +217,6 @@
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
       <workItem from="1594124023513" duration="39894000" />
-    </task>
-    <task id="LOCAL-00009" summary="1. 从压缩文件中创建DataSet之 Scala 实现">
-      <created>1594104856668</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1594104856668</updated>
-    </task>
-    <task id="LOCAL-00010" summary="1. Transformation函数map之 scala 实现">
-      <created>1594106678776</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1594106678776</updated>
     </task>
     <task id="LOCAL-00011" summary="1. Transformation函数map之 Java 实现">
       <created>1594107723589</created>
@@ -564,7 +547,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594263219713</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fix">
+      <created>1594644443321</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1594644443321</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix">
+      <created>1594644498723</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1594644498723</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. 基于Flink编程的计时器之Java实现" />
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Scala实现" />
     <MESSAGE value="1. 基于Flink的分布式缓存功能的Java实现" />
     <MESSAGE value="1. 基于Flink的广播变量Broadcast Variables功能的Java,Scala实现" />
@@ -609,7 +605,8 @@
     <MESSAGE value="Window Functions之ReduceFunction的Java实现" />
     <MESSAGE value="Window Functions之ProcessWindowFunction的Java实现" />
     <MESSAGE value="Window Functions之watermark的Scala实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="Window Functions之watermark的Scala实现" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
