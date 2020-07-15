@@ -29,9 +29,9 @@ public class JavaKafkaConnectorProducerApp {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         DataStreamSource<String> data = env.socketTextStream("localhost", 9988);
-        String topic = "tyraeltest";
+        String topic = "testDemo";
         Properties properties = new Properties();
-        properties.setProperty("bootstrap.servers", "10.40.155.50:9092");
+        properties.setProperty("bootstrap.servers", "localhost:9092");
         FlinkKafkaProducer<String> kafkaSink = new FlinkKafkaProducer<>(topic, new KeyedSerializationSchemaWrapper<String>(new SimpleStringSchema()), properties);
         data.addSink(kafkaSink);
 

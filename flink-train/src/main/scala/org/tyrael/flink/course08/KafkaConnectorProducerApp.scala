@@ -14,9 +14,9 @@ object KafkaConnectorProducerApp {
 
     // 从socket接收数据，通过Flink，将数据SInk到Kafka
     val data = env.socketTextStream("localhost", 9999)
-    val topic = "tyraeltest"
+    val topic = "testDemo"
     val properties = new Properties()
-    properties.setProperty("bootstrap.servers", "10.40.155.50:9092")
+    properties.setProperty("bootstrap.servers", "localhost:9092")
 
     val kafkaSink = new FlinkKafkaProducer[String](topic, new KeyedSerializationSchemaWrapper[String](new SimpleStringSchema()), properties)
     data.addSink(kafkaSink)
