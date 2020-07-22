@@ -32,7 +32,6 @@ public class TyraelKafkaProducer {
                     .append(getIps()).append("\t")
                     .append(getDomains()).append("\t")
                     .append(getTraffic()).append("\t");
-
             System.out.println(builder.toString());
             producer.send(new ProducerRecord<String, String>(topic, builder.toString()));
             Thread.sleep(2000);
