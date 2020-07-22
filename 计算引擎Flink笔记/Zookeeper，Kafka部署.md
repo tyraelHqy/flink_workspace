@@ -82,5 +82,16 @@ ssh hadoop@192.168.199.233
   ./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic tyraeltest
   ```
 
-  
+
+## ElasticSearch 部署
+
+下载ElasticSearch，解压
+
+修改config目录下的network配置，修改为0.0.0.0
+
+进入bin目录，启动elasticsearch，如果windows则启动.bat文件，需要在后台运行则使用
+
+```
+./elasticsearch.bat -d
+```
 
