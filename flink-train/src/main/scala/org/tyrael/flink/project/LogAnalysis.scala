@@ -94,7 +94,7 @@ object LogAnalysis {
         timestamp
       }
     }).keyBy(1) //此处是按照域名进行keyBy的
-      .window(TumblingEventTimeWindows.of(Time.seconds(30)))
+      .window(TumblingEventTimeWindows.of(Time.seconds(60)))
       .apply(new WindowFunction[(Long,String,Long),(String,String,Long),Tuple, TimeWindow] {
         override def apply(key: Tuple, window: TimeWindow, input: Iterable[(Long, String, Long)], out: Collector[(String, String, Long)]): Unit = {
 

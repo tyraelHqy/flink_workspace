@@ -1,28 +1,26 @@
 package org.tyrael.flink.project
 
 import java.text.SimpleDateFormat
+import java.util
 import java.util.{Date, Properties}
 
 import org.apache.flink.api.common.functions.RuntimeContext
 import org.apache.flink.api.java.tuple.Tuple
 import org.apache.flink.streaming.api.TimeCharacteristic
 import org.apache.flink.streaming.api.functions.AssignerWithPeriodicWatermarks
+import org.apache.flink.streaming.api.functions.co.CoFlatMapFunction
 import org.apache.flink.streaming.api.scala.{StreamExecutionEnvironment, _}
 import org.apache.flink.streaming.api.scala.function.WindowFunction
 import org.apache.flink.streaming.api.watermark.Watermark
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows
 import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow
-import org.apache.flink.streaming.connectors.elasticsearch.{ElasticsearchSinkFunction, RequestIndexer}
-import org.apache.flink.streaming.connectors.elasticsearch6.ElasticsearchSink
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer
 import org.apache.flink.streaming.util.serialization.SimpleStringSchema
 import org.apache.flink.util.Collector
-import org.apache.http.HttpHost
-import org.elasticsearch.action.index.IndexRequest
-import org.elasticsearch.client.Requests
 import org.slf4j.LoggerFactory
 
+import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
 object LogAnalysis02 {
@@ -77,7 +75,40 @@ object LogAnalysis02 {
      * 使得满足我们的业务需求为准
      */
 
-    val resultData = logData.assignTimestampsAndWatermarks(new AssignerWithPeriodicWatermarks[(Long,String,Long)]{
+    val mysqlData = env.addSource(new TyraelMySQLSource)
+    //    mysqlData.print()
+    val connectData = logData.connect(mysqlData)
+      .flatMap(new CoFlatMapFunction[(Long, String, Long), mutable.HashMap[String, String], String] {
+
+        var userDomainMap = mutable.HashMap[String, String]()
+
+        // log
+        override def flatMap1(value: (Long, String, Long), out: Collector[String]): Unit = {
+          val domain = value._2
+          val userId = userDomainMap.getOrElse(domain, "")
+
+          //          println("~~~~~~~~~~~~~" + userId)
+
+          out.collect(value._1 + "\t" + value._2 + "\t" + value._3 + "\t" + userId)
+        }
+
+        // MySQL
+        override def flatMap2(value: mutable.HashMap[String, String], out: Collector[String]): Unit = {
+          userDomainMap = value
+        }
+      })
+    connectData.print()
+    val connect = connectData.map(x => {
+      val splits = x.split("\t")
+      val time = splits(0).toLong
+      println(time)
+      val traffic = splits(2).toLong
+      val userId = splits(3).toLong
+      (time, traffic, userId)
+    })
+
+    // 1595506219000	v.qq.com	9370	8000000
+    val resultData = connect.assignTimestampsAndWatermarks(new AssignerWithPeriodicWatermarks[(Long, Long, Long)] {
 
       val maxOutOfOrderness = 10000L // 3.5 seconds
 
@@ -87,69 +118,40 @@ object LogAnalysis02 {
         new Watermark(currentMaxTimestamp - maxOutOfOrderness)
       }
 
-      override def extractTimestamp(element: (Long, String, Long), previousElementTimestamp: Long): Long = {
+      override def extractTimestamp(element: (Long, Long, Long), previousElementTimestamp: Long): Long = {
         val timestamp = element._1
         currentMaxTimestamp = Math.max(timestamp, currentMaxTimestamp)
         timestamp
       }
-    }).keyBy(1) //此处是按照域名进行keyBy的
-      .window(TumblingEventTimeWindows.of(Time.seconds(30)))
-      .apply(new WindowFunction[(Long,String,Long),(String,String,Long),Tuple, TimeWindow] {
-        override def apply(key: Tuple, window: TimeWindow, input: Iterable[(Long, String, Long)], out: Collector[(String, String, Long)]): Unit = {
+    })
 
-          val domain = key.getField(0).toString
+    resultData.print()
+
+    val value = resultData.keyBy(2)
+    value.print()
+    val value1 = value // 此处按照域名进行keyBy
+      .window(TumblingEventTimeWindows.of(Time.seconds(5)))
+      .apply(new WindowFunction[(Long, Long, Long), (String, Long, Long), Tuple, TimeWindow] {
+        override def apply(key: Tuple, window: TimeWindow, input: Iterable[(Long, Long, Long)], out: Collector[(String, Long, Long)]): Unit = {
+
+          val userId = key.getField(2)
           var sum = 0l
 
           val times = ArrayBuffer[Long]()
 
           val iterator = input.iterator
-          while(iterator.hasNext) {
+          while(iterator.hasNext){
             val next = iterator.next()
-            sum += next._3  // traffic求和
+            sum += next._2
 
-            // TODO... 是能拿到你这个window里面的时间的  next._1
             times.append(next._1)
           }
-
-          /**
-           *  第一个参数：这一分钟的时间 2019-09-09 20:20
-           *  第二个参数：域名
-           *  第三个参数：traffic的和
-           */
           val time = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date(times.max))
-          out.collect((time,domain,sum))
+          out.collect((time,userId,sum))
         }
       })
 
-
-    val httpHosts = new java.util.ArrayList[HttpHost]
-    httpHosts.add(new HttpHost("127.0.0.1", 9200, "http"))
-
-    val esSinkBuilder = new ElasticsearchSink.Builder[(String, String, Long)](
-      httpHosts,
-      new ElasticsearchSinkFunction[(String, String, Long)] {
-        def process(element: (String, String, Long), ctx: RuntimeContext, indexer: RequestIndexer) {
-          val json = new java.util.HashMap[String, Any]
-          json.put("time", element._1)
-          json.put("domain", element._2)
-          json.put("traffics", element._3)
-
-          val id = element._1 + "-" + element._2
-
-          val rqst: IndexRequest = Requests.indexRequest
-            .index("cdn")
-            .`type`("traffic")
-            .id(id)
-            .source(json)
-
-          indexer.add(rqst)
-        }
-      }
-    )
-    esSinkBuilder.setBulkFlushMaxActions(1)
-
-    resultData.addSink(esSinkBuilder.build)
-    resultData.print()
+    value1.print()
 
     env.execute("LogAnalysis02")
   }
