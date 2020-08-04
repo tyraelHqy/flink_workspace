@@ -33,7 +33,7 @@ object LogAnalysis02 {
 
     val topic = "tyraeltest"
     val properties = new Properties()
-    properties.setProperty("bootstrap.servers", "10.40.155.50:9092")
+    properties.setProperty("bootstrap.servers", "10.40.156.50:9092")
     properties.setProperty("group.id", "test")
 
     // 接收kafka数据

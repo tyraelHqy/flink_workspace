@@ -8,7 +8,6 @@ import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.java.tuple.Tuple;
 import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.api.java.tuple.Tuple4;
-import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
@@ -33,7 +32,7 @@ public class JavaLogAnalysis {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         String topic= "tyraeltest";
         Properties properties = new Properties();
-        properties.setProperty("bootstrap.servers", "10.40.155.50:9092");
+        properties.setProperty("bootstrap.servers", "10.40.156.50:9092");
         properties.setProperty("group.id", "test");
         DataStreamSource<String> data = env.addSource(new FlinkKafkaConsumer<String>(topic,new SimpleStringSchema(),properties));
         data.print();
@@ -79,7 +78,7 @@ public class JavaLogAnalysis {
 
         SingleOutputStreamOperator<Tuple3<String, String, Long>> resultData = logData.assignTimestampsAndWatermarks(new AssignerWithPeriodicWatermarks<Tuple3<Long, String, Long>>() {
 
-            private final long maxOutOfOrderness = 10000; // 3.5 seconds
+            private final long maxOutOfOrderness = 3500; // 3.5 seconds
 
             private long currentMaxTimestamp;
 
@@ -96,7 +95,7 @@ public class JavaLogAnalysis {
                 return timestamp;
             }
         }).keyBy(1)
-                .window(TumblingEventTimeWindows.of(Time.seconds(60)))
+                .window(TumblingEventTimeWindows.of(Time.seconds(30)))
                 .apply(new WindowFunction<Tuple3<Long, String, Long>, Tuple3<String, String, Long>, Tuple, TimeWindow>() {
                     @Override
                     public void apply(Tuple tuple, TimeWindow window, Iterable<Tuple3<Long, String, Long>> input, Collector<Tuple3<String, String, Long>> out) throws Exception {

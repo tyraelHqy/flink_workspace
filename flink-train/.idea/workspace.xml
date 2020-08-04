@@ -1,10 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="">
+    <list default="true" id="99563b66-11e0-47f3-954e-1160dac094d1" name="Default Changelist" comment="自定义SQL数据源的读取">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/experiment/StreamingWindowWatermark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/sql/CREATE TABLE t_qshare_live_qa_d.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/sql/qshare_online_live.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/sql/t_qshare_live_pvuv_d.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$4$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$4$$anonfun$createSerializer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$5$$anon$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$5$$anonfun$createSerializer$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$6$$anon$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$6$$anonfun$createSerializer$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anon$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anonfun$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anonfun$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anonfun$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$$anonfun$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$10$$anon$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$10$$anonfun$createSerializer$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$11$$anon$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$11$$anonfun$createSerializer$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$12.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$13$$anon$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$13.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$14$$anonfun$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$14.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$15.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$6$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$6$$anonfun$createSerializer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$7$$anon$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$7$$anonfun$createSerializer$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$8$$anon$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$8$$anonfun$createSerializer$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anon$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anonfun$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anonfun$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anonfun$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anonfun$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$$anonfun$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/LogAnalysis02.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSourceTest$$anon$2$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSourceTest$$anon$2$$anonfun$createSerializer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSourceTest$$anon$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSourceTest$$anon$4$$anon$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSourceTest$$anon$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSourceTest$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/project/TyraelMySQLSourceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quickstart/src/main/java/org/myorg/quickstart/sql/SqlGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quickstart/src/main/java/org/myorg/quickstart/sql/createData.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quickstart/src/main/java/org/myorg/quickstart/sql/realtime.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../share-folder/kafka_2.11-1.1.1.tgz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../share-folder/zookeeper-3.4.5-cdh5.15.1.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/project/JavaLogAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/project/JavaLogAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tryael/flink/project/TyraelKafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tryael/flink/project/TyraelKafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/project/LogAnalysis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/project/LogAnalysis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/project/LogAnalysis02.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/tyrael/flink/project/LogAnalysis02.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3$$anon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3$$anonfun$createSerializer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3$$anonfun$createSerializer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4$$anon$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4$$anon$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4$$anonfun$createSerializer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4$$anonfun$createSerializer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anon$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$WindowFunctionTest$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$WindowFunctionTest$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$WindowFunctionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course07/WatermarkTest$WindowFunctionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course08/KafkaConnectorConsumerApp$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/tyrael/flink/course08/KafkaConnectorConsumerApp$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/9/4/9412369239171b16a65c4daf083d73545b21f16e" beforeDir="false" afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/9/4/9412369239171b16a65c4daf083d73545b21f16e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../quickstart/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +133,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Scala Class" />
         <option value="Package Object" />
+        <option value="Scala Class" />
         <option value="Class" />
       </list>
     </option>
@@ -86,10 +164,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2665441" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.tyrael.flink.project" />
       <recent name="org.tryael.flink.course07" />
       <recent name="org.tyrael.flink.course07" />
       <recent name="org.tyrael.flink.course05" />
@@ -110,13 +189,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FileSystemSink">
-    <configuration name="FileSystemSink" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course08.FileSystemSink" />
+  <component name="RunManager" selected="Application.JavaLogAnalysis">
+    <configuration name="JavaLogAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.project.JavaLogAnalysis" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.tyrael.flink.course08.*" />
+          <option name="PATTERN" value="org.tryael.flink.project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +203,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaWindowsProcessApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course07.JavaWindowsProcessApp" />
+    <configuration name="LogAnalysis" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.project.LogAnalysis" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.tryael.flink.course07.*" />
+          <option name="PATTERN" value="org.tyrael.flink.project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,12 +216,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaWindowsReduceApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.course07.JavaWindowsReduceApp" />
+    <configuration name="LogAnalysis02" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.project.LogAnalysis02" />
       <module name="flink-train" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.tryael.flink.course07.*" />
+          <option name="PATTERN" value="org.tyrael.flink.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TyraelKafkaProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tryael.flink.project.TyraelKafkaProducer" />
+      <module name="flink-train" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tryael.flink.project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,33 +266,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WindowsReduceAppApp" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.tyrael.flink.course07.WindowsReduceAppApp" />
-      <module name="flink-train" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tyrael.flink.course07.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.JavaWindowsProcessApp" />
-      <item itemvalue="Application.JavaWindowsReduceApp" />
+      <item itemvalue="Application.TyraelKafkaProducer" />
+      <item itemvalue="Application.LogAnalysis" />
       <item itemvalue="Application.WatermarkTest" />
-      <item itemvalue="Application.WindowsReduceAppApp" />
-      <item itemvalue="Application.FileSystemSink" />
+      <item itemvalue="Application.LogAnalysis02" />
+      <item itemvalue="Application.JavaLogAnalysis" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FileSystemSink" />
+        <item itemvalue="Application.TyraelKafkaProducer" />
+        <item itemvalue="Application.JavaLogAnalysis" />
+        <item itemvalue="Application.LogAnalysis" />
+        <item itemvalue="Application.LogAnalysis02" />
         <item itemvalue="Application.WatermarkTest" />
-        <item itemvalue="Application.JavaWindowsProcessApp" />
-        <item itemvalue="Application.JavaWindowsReduceApp" />
-        <item itemvalue="Application.WindowsReduceAppApp" />
       </list>
     </recent_temporary>
   </component>
@@ -217,118 +296,12 @@
       <workItem from="1594046191467" duration="180000" />
       <workItem from="1594046379414" duration="26797000" />
       <workItem from="1594124023513" duration="39894000" />
-    </task>
-    <task id="LOCAL-00011" summary="1. Transformation函数map之 Java 实现">
-      <created>1594107723589</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1594107723589</updated>
-    </task>
-    <task id="LOCAL-00012" summary="1. Transformation函数filter之 Scala 实现">
-      <created>1594109396518</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1594109396518</updated>
-    </task>
-    <task id="LOCAL-00013" summary="1. i Transformation函数filter之Java实现">
-      <created>1594109721936</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1594109721936</updated>
-    </task>
-    <task id="LOCAL-00014" summary="1. Transformation函数mapPartition之Scala实现">
-      <created>1594110808892</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1594110808892</updated>
-    </task>
-    <task id="LOCAL-00015" summary="1. Transformation函数mapPartition之 Java 实现">
-      <created>1594111377228</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1594111377228</updated>
-    </task>
-    <task id="LOCAL-00016" summary="1. Transformation函数first之 Scala 实现">
-      <created>1594111989976</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1594111989976</updated>
-    </task>
-    <task id="LOCAL-00017" summary="1. Transformation函数first之 Java 实现">
-      <created>1594112564448</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1594112564448</updated>
-    </task>
-    <task id="LOCAL-00018" summary="1. Transformation函数flatMap之Scala实现">
-      <created>1594113102133</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1594113102133</updated>
-    </task>
-    <task id="LOCAL-00019" summary="1. Transformation函数flatMap之Java实现">
-      <created>1594113648453</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1594113648453</updated>
-    </task>
-    <task id="LOCAL-00020" summary="1. Transformation函数distinct之Scala实现">
-      <created>1594114072503</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1594114072503</updated>
-    </task>
-    <task id="LOCAL-00021" summary="1. Transformation函数distinct之Java实现">
-      <created>1594114215962</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1594114215962</updated>
-    </task>
-    <task id="LOCAL-00022" summary="1. Transformation函数join之Scala实现">
-      <created>1594115219726</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1594115219726</updated>
-    </task>
-    <task id="LOCAL-00023" summary="1. Transformation函数outerJoin之Scala实现">
-      <created>1594115727371</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1594115727371</updated>
-    </task>
-    <task id="LOCAL-00024" summary="1. Transformation函数outerJoin之Scala实现">
-      <created>1594115750784</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1594115750784</updated>
-    </task>
-    <task id="LOCAL-00025" summary="1. Transformation函数outerJoin之Java实现">
-      <created>1594121858301</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1594121858301</updated>
-    </task>
-    <task id="LOCAL-00026" summary="1. Transformation函数cross之 Scala 实现">
-      <created>1594122898359</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1594122898359</updated>
+      <workItem from="1594708669310" duration="1803000" />
+      <workItem from="1594730713440" duration="2033000" />
+      <workItem from="1594779551537" duration="12150000" />
+      <workItem from="1595338123638" duration="51336000" />
+      <workItem from="1595818386515" duration="28649000" />
+      <workItem from="1596014565353" duration="30576000" />
     </task>
     <task id="LOCAL-00027" summary="1. Transformation函数cross之 java 实现">
       <created>1594123167254</created>
@@ -561,7 +534,119 @@
       <option name="project" value="LOCAL" />
       <updated>1594644498723</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="fix">
+      <created>1594698916305</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1594698916306</updated>
+    </task>
+    <task id="LOCAL-00061" summary="fix">
+      <created>1594698974768</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1594698974768</updated>
+    </task>
+    <task id="LOCAL-00062" summary="更新笔记">
+      <created>1594780882546</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1594780882547</updated>
+    </task>
+    <task id="LOCAL-00063" summary="更新笔记">
+      <created>1594804020620</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1594804020620</updated>
+    </task>
+    <task id="LOCAL-00064" summary="新建kafka与flink之间的交互逻辑">
+      <created>1594806425057</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1594806425057</updated>
+    </task>
+    <task id="LOCAL-00065" summary="将kafka作为消费者，与flink进行通信">
+      <created>1594820734501</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1594820734501</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Java实现kafka与flink之间的交互">
+      <created>1594821466310</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1594821466310</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Mock数据之Kafka生产者代码主流程开发">
+      <created>1595339200307</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1595339200307</updated>
+    </task>
+    <task id="LOCAL-00068" summary="完成了Kafka的模拟数据生成，并且与消费者进行了验证。">
+      <created>1595340989235</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1595340989235</updated>
+    </task>
+    <task id="LOCAL-00069" summary="数据清洗以及时间戳水印的添加">
+      <created>1595403125002</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1595403125002</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Sink 至 ElasticSearch">
+      <created>1595424508237</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1595424508237</updated>
+    </task>
+    <task id="LOCAL-00071" summary="自定义SQL数据源的读取">
+      <created>1595503498353</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1595503498353</updated>
+    </task>
+    <task id="LOCAL-00072" summary="自定义SQL数据源与流数据的合并">
+      <created>1595556362928</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1595556362928</updated>
+    </task>
+    <task id="LOCAL-00073" summary="完成Flink项目">
+      <created>1595849940090</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1595849940090</updated>
+    </task>
+    <task id="LOCAL-00074" summary="水印实验以及笔记更新">
+      <created>1596108346968</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1596108346968</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Flink内存笔记更新">
+      <created>1596119639194</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1596119639194</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,19 +666,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. 基于Flink的分布式缓存功能的Scala实现" />
-    <MESSAGE value="1. 基于Flink的分布式缓存功能的Java实现" />
-    <MESSAGE value="1. 基于Flink的广播变量Broadcast Variables功能的Java,Scala实现" />
-    <MESSAGE value="1. 从Socket创建DataStream之Java,Scala实现" />
-    <MESSAGE value="1. 自定义数据源方式SourceFunction之Scala实现" />
-    <MESSAGE value="1. 自定义数据源方式ParallelSourceFunction之Scala实现" />
-    <MESSAGE value="1. 自定义数据源方式RichParallelSourceFunction之Scala实现" />
-    <MESSAGE value="1. 自定义数据源方式之Java实现" />
-    <MESSAGE value="1. Transformation函数map和filter之 Scala 实现" />
-    <MESSAGE value="1. Transformation函数map和filter之 Java 实现" />
-    <MESSAGE value="1. Transformation函数union之Scala和Java实现" />
-    <MESSAGE value="1. Transformation函数split和select之Scala实现" />
-    <MESSAGE value="1. Transformation函数split和select之Java实现" />
     <MESSAGE value="1. 自定义Sink之功能测试Java,Scala实现" />
     <MESSAGE value="1. Table SQL 基本环境搭建" />
     <MESSAGE value="使用Scala完成Table API&amp;SQL功能的开发" />
@@ -606,7 +678,20 @@
     <MESSAGE value="Window Functions之ProcessWindowFunction的Java实现" />
     <MESSAGE value="Window Functions之watermark的Scala实现" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="更新笔记" />
+    <MESSAGE value="新建kafka与flink之间的交互逻辑" />
+    <MESSAGE value="将kafka作为消费者，与flink进行通信" />
+    <MESSAGE value="Java实现kafka与flink之间的交互" />
+    <MESSAGE value="Mock数据之Kafka生产者代码主流程开发" />
+    <MESSAGE value="完成了Kafka的模拟数据生成，并且与消费者进行了验证。" />
+    <MESSAGE value="数据清洗以及时间戳水印的添加" />
+    <MESSAGE value="Sink 至 ElasticSearch" />
+    <MESSAGE value="自定义SQL数据源与流数据的合并" />
+    <MESSAGE value="完成Flink项目" />
+    <MESSAGE value="水印实验以及笔记更新" />
+    <MESSAGE value="自定义SQL数据源的读取" />
+    <MESSAGE value="Flink内存笔记更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flink内存笔记更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -615,11 +700,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/tryael/flink/course04/JavaDataSetBroadcastApp.java</url>
           <line>35</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/org/tyrael/flink/course07/WatermarkTest.scala</url>
-          <line>22</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
