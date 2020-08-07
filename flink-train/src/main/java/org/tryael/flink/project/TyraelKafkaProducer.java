@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class TyraelKafkaProducer {
 
-    private static final String url = "10.40.156.50:9092";
+    private static final String url = "localhost:9092";
 
     public static void main(String[] args) throws InterruptedException {
 
