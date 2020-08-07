@@ -20,15 +20,29 @@ object WatermarkTest {
       return
     }
 
+    println(System.currentTimeMillis())
+
+    /**
+     * 设置数据源，接收socket的数据
+     */
     val hostname = args(0)
     val port = args(1).toInt
 
     val env = StreamExecutionEnvironment.getExecutionEnvironment
 
+    /**
+     * 设置Flink的时间类型为EventTime
+     */
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
+    /**
+     * 接收socket数据
+     */
     val input = env.socketTextStream(hostname, port)
 
+    /**
+     * 将每行数据按照字符分隔，每行map成一个tuple类型（code，time）
+     */
     val inputMap = input.map(x => {
       val arr = x.split("\\W+")
       val code = arr(0)
@@ -36,6 +50,10 @@ object WatermarkTest {
       (code, time)
     })
 
+    /**
+     * 抽取timestamp生成watermark。并且打印
+     * （code，time，格式化的time，currentMaxTimestamp，currentMaxTimestamp的格式化时间，watermark时间）
+     */
     val watermark = inputMap.assignTimestampsAndWatermarks(new AssignerWithPeriodicWatermarks[(String, Long)] {
       var currentMaxTimeStamp = 0L
       val maxOutOfOrderness = 10000L // 最大允许的乱序时间是10s
@@ -52,11 +70,15 @@ object WatermarkTest {
       override def extractTimestamp(element: (String, Long), previousElementTimestamp: Long): Long = {
         val timestamp = element._2
         currentMaxTimeStamp = Math.max(timestamp, currentMaxTimeStamp)
-        println("timestamp:" + element._1 + "," + element._2 + "|" + format.format(element._2) + "," + currentMaxTimeStamp + "|" + format.format(currentMaxTimeStamp) + "," + a.toString)
+        println("timestamp:" + element._1 + "," + element._2 + "|" + format.format(element._2) + "," +"currentMaxTimeStamp:"+ currentMaxTimeStamp + "|" + format.format(currentMaxTimeStamp) + "," + a.toString)
         timestamp
       }
     })
 
+    /**
+     * event time每隔3秒触发一次窗口，输出
+     * （code，窗口内元素个数，窗口内最早元素的时间，窗口内最晚元素的时间，窗口自身开始时间，窗口自身结束时间）
+     */
     val window = watermark.keyBy(_._1).window(TumblingEventTimeWindows.of(Time.seconds(3))).apply(new WindowFunctionTest)
 
     window.print()
@@ -64,6 +86,9 @@ object WatermarkTest {
     env.execute("WatermarkTest")
   }
 
+  /**
+   * 重新实现了WindowFunction
+   */
   class WindowFunctionTest extends WindowFunction[(String,Long),(String, Int,String,String,String,String),String,TimeWindow]{
 
     override def apply(key: String, window: TimeWindow, input: Iterable[(String, Long)], out: Collector[(String, Int,String,String,String,String)]): Unit = {
