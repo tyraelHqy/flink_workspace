@@ -10,10 +10,12 @@ import org.apache.flink.streaming.util.serialization.SimpleStringSchema
 object KafkaConnectorConsumerApp {
 
   def main(args: Array[String]): Unit = {
+
     val env = StreamExecutionEnvironment.getExecutionEnvironment
-    val topic = "tyraeltest"
+    val topic = "testDemo"
+
     val properties = new Properties()
-    properties.setProperty("bootstrap.servers", "10.40.155.50:9092")
+    properties.setProperty("bootstrap.servers", "localhost:9092")
     properties.setProperty("group.id", "test")
     val data = env.addSource(new FlinkKafkaConsumer[String](topic, new SimpleStringSchema(), properties))
     data.print()

@@ -23,9 +23,9 @@ public class JavaKafkaConnectorConsumerApp {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        String topic= "tyraeltest";
+        String topic= "testDemo";
         Properties properties = new Properties();
-        properties.setProperty("bootstrap.servers", "10.40.155.50:9092");
+        properties.setProperty("bootstrap.servers", "localhost:9092");
         properties.setProperty("group.id", "test");
         DataStreamSource<String> data = env.addSource(new FlinkKafkaConsumer<String>(topic,new SimpleStringSchema(),properties));
         data.print();
